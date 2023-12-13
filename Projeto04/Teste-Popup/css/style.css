@@ -1,0 +1,114 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+
+body{   
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2D2E4A;
+}
+
+.btnPopUp{
+    font-size: x-large;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #EC87CF;
+    color: white;
+    cursor: pointer;
+}
+
+hr{
+    border: 0px;
+    border-top: 1px solid grey;
+}
+
+.container-popup{
+    display: none;
+    width: 100vw;
+    position: fixed;
+    top: 30px;
+    z-index: 999;
+    justify-content: center;
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    align-items: center;
+    color: #2D2E4A;
+    border-left: solid 15px #EC87CF;
+
+}
+
+.ativo{
+    display: flex;
+}
+
+.ativo .popup{
+    animation: modal .4s;
+}
+
+@keyframes modal{
+    from {
+        opacity: 0;
+        transform: translate3d(0,-60px,0); 
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+span{
+    margin: 10px auto;
+
+}
+
+.btns button{
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btnOK{
+    background-color: #EC87CF;
+}
+
+.btnFechar{
+    background-color: #EC87CF;
+}
+
+@media (max-width: 500px){
+    .popup{
+        padding: 10px;
+        width: 80%;
+    }
+
+    span, .btns button {
+        font-size: small;
+    }
+
+}
+
+
+
+
+
+
+
+
